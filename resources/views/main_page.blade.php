@@ -14,7 +14,7 @@
     <script defer src="{{asset('js/app.js')}}"></script>
 </head>
 
-<body>
+<body style="margin: 0; padding: 0">
     <div id="app"></div>
 </body>
 
