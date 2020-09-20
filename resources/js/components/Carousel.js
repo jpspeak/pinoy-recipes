@@ -1,6 +1,20 @@
 import React from "react";
 import { Button } from "@material-ui/core";
+
+// import { makeStyles } from "@material-ui/core/styles";
+// const useStyles = makeStyles(() => ({
+//     title: {
+//         width: "6vw"
+//     }
+// }));
+
 const Carousel = () => {
+    const styles = {
+        title: {
+            fontSize: "6vw"
+        },
+        button: { color: "white", borderColor: "white" }
+    };
     return (
         <>
             <div
@@ -25,7 +39,7 @@ const Carousel = () => {
                     ></li>
                 </ol>
                 <div className="carousel-inner">
-                    <div className="carousel-item active">
+                    <div className="carousel-item active ">
                         <img
                             className="d-block w-100"
                             src="/storage/carousel-images/crispy-bicol-express.jpg"
@@ -36,12 +50,13 @@ const Carousel = () => {
                                 objectFit: "cover"
                             }}
                         />
-                        <div className="carousel-caption  d-md-block">
-                            <h3>Crispy Bicol Express</h3>
+                        <div className="carousel-caption">
+                            <h3 style={styles.title}>Crispy Bicol Express</h3>
                             <Button
-                                color="secondary"
-                                variant="contained"
+                                variant="outlined"
                                 size="small"
+                                disableElevatio
+                                style={styles.button}
                             >
                                 Check Recipe
                             </Button>
@@ -59,11 +74,11 @@ const Carousel = () => {
                             }}
                         />
                         <div className="carousel-caption  d-md-block">
-                            <h3>Chicken Afridata</h3>
+                            <h3 style={styles.title}>Chicken Afridata</h3>
                             <Button
-                                color="secondary"
-                                variant="contained"
+                                variant="outlined"
                                 size="small"
+                                style={styles.button}
                             >
                                 Check Recipe
                             </Button>
@@ -81,11 +96,11 @@ const Carousel = () => {
                             }}
                         />
                         <div className="carousel-caption  d-md-block">
-                            <h3>Pork Bistek</h3>
+                            <h3 style={styles.title}>Pork Bistek</h3>
                             <Button
-                                color="secondary"
-                                variant="contained"
+                                variant="outlined"
                                 size="small"
+                                style={styles.button}
                             >
                                 Check Recipe
                             </Button>
