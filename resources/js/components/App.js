@@ -1,9 +1,16 @@
 import React from "react";
 import MyAppBar from "./MyAppBar";
 import Carousel from "./Carousel";
+import PinoyRecipesMarketNav from "./PinoyRecipesMarketNav";
 
-import { Container, makeStyles } from "@material-ui/core";
+import { Container } from "@material-ui/core";
+import {
+    makeStyles,
+    createMuiTheme,
+    ThemeProvider
+} from "@material-ui/core/styles";
 
+import { BrowserRouter as Router, Route } from "react-router-dom";
 const useStyles = makeStyles(theme => ({
     clearPadding: {
         [theme.breakpoints.down("sm")]: {
@@ -11,14 +18,27 @@ const useStyles = makeStyles(theme => ({
         }
     }
 }));
+
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: "#8b0000"
+        }
+    }
+});
 const App = () => {
     const classes = useStyles();
     return (
         <>
-            <MyAppBar />
-            <Container maxWidth="lg" className={classes.clearPadding}>
-                <Carousel />
-            </Container>
+            <ThemeProvider theme={theme}>
+                <Router>
+                    <MyAppBar />
+                    <Container maxWidth="lg" className={classes.clearPadding}>
+                        <Carousel />
+                        <PinoyRecipesMarketNav />
+                    </Container>
+                </Router>
+            </ThemeProvider>
         </>
     );
 };
