@@ -55,7 +55,6 @@ const Carousel = () => {
                             <Button
                                 variant="outlined"
                                 size="small"
-                                disableElevatio
                                 style={styles.button}
                             >
                                 Check Recipe
