@@ -5,6 +5,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
+import { Container } from "@material-ui/core";
+
 import MenuIcon from "@material-ui/icons/Menu";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
@@ -17,6 +19,11 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
         flexGrow: 1
+    },
+    clearPadding: {
+        [theme.breakpoints.down("sm")]: {
+            padding: 0
+        }
     }
 }));
 
@@ -26,8 +33,9 @@ export default function MyAppBar() {
     return (
         <div className={classes.root}>
             <AppBar position="static">
-                <Toolbar>
-                    {/* <IconButton
+                <Container maxWidth="lg" className={classes.clearPadding}>
+                    <Toolbar>
+                        {/* <IconButton
                         edge="start"
                         className={classes.menuButton}
                         color="inherit"
@@ -35,13 +43,14 @@ export default function MyAppBar() {
                     >
                         <MenuIcon />
                     </IconButton> */}
-                    <Typography variant="h6" className={classes.title}>
-                        PinoyRecipes
-                    </Typography>
-                    <IconButton color="inherit">
-                        <ShoppingBasketIcon />
-                    </IconButton>
-                </Toolbar>
+                        <Typography variant="h6" className={classes.title}>
+                            PinoyRecipes
+                        </Typography>
+                        <IconButton color="inherit">
+                            <ShoppingBasketIcon />
+                        </IconButton>
+                    </Toolbar>
+                </Container>
             </AppBar>
         </div>
     );

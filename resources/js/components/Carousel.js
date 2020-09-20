@@ -29,10 +29,15 @@ const Carousel = () => {
                         <img
                             className="d-block w-100"
                             src="/storage/carousel-images/crispy-bicol-express.jpg"
-                            alt="First slide"
+                            alt="crispy-bicol-express"
+                            style={{
+                                filter: "brightness(70%)",
+                                height: 400,
+                                objectFit: "cover"
+                            }}
                         />
                         <div className="carousel-caption  d-md-block">
-                            <h5>Crispy Bicol Express</h5>
+                            <h3>Crispy Bicol Express</h3>
                             <Button
                                 color="secondary"
                                 variant="contained"
@@ -45,11 +50,16 @@ const Carousel = () => {
                     <div className="carousel-item">
                         <img
                             className="d-block w-100"
-                            src="/storage/carousel-images/lutong-bahay-chicken-afritada.jpg"
-                            alt="Second slide"
+                            src="/storage/carousel-images/chicken-afritada.jpg"
+                            alt="chicken-afritada"
+                            style={{
+                                filter: "brightness(70%)",
+                                height: 400,
+                                objectFit: "cover"
+                            }}
                         />
                         <div className="carousel-caption  d-md-block">
-                            <h5>Chicken Afridata</h5>
+                            <h3>Chicken Afridata</h3>
                             <Button
                                 color="secondary"
                                 variant="contained"
@@ -63,10 +73,15 @@ const Carousel = () => {
                         <img
                             className="d-block w-100"
                             src="/storage/carousel-images/pork-bistek.jpg"
-                            alt="Third slide"
+                            alt="pork-bistek"
+                            style={{
+                                filter: "brightness(70%)",
+                                height: 400,
+                                objectFit: "cover"
+                            }}
                         />
                         <div className="carousel-caption  d-md-block">
-                            <h5>Pork Bistek</h5>
+                            <h3>Pork Bistek</h3>
                             <Button
                                 color="secondary"
                                 variant="contained"
